@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+
+# Flutter
+gui/.dart_tool/
+gui/.idea/
+gui/build/
+gui/ios/Pods/
+gui/.pub-cache/
+gui/android/.gradle/
+
+# Docker
+postgres_data/

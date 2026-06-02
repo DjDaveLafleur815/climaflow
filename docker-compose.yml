@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./api/.env
+    volumes:
+      - ./api:/app
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: climaflow-db
+    environment:
+      POSTGRES_DB: climaflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password123
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
-import 'features/weather/presentation/screens/home_screen.dart';
+import 'views/home_view.dart';
 
 final router = GoRouter(
   initialLocation: '/',
-  routes: [GoRoute(path: '/', builder: (context, state) => const HomeScreen())],
+  routes: [GoRoute(path: '/', builder: (context, state) => const HomeView())],
 );

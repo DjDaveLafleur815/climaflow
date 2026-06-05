@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'router.dart';
 
 void main() {
-  runApp(const ProviderScope(child: MyApp()));
+  runApp(const ClimaFlowApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ClimaFlowApp extends StatelessWidget {
+  const ClimaFlowApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +14,9 @@ class MyApp extends StatelessWidget {
       title: 'ClimaFlow',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      darkTheme: ThemeData.dark(useMaterial3: true),
       routerConfig: router,
     );
   }

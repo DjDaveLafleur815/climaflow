@@ -8,8 +8,6 @@ class WeatherModel {
   final double windSpeed;
   final int pressure;
   final String icon;
-  final double lat;
-  final double lon;
 
   WeatherModel({
     required this.city,
@@ -21,8 +19,6 @@ class WeatherModel {
     required this.windSpeed,
     required this.pressure,
     required this.icon,
-    required this.lat,
-    required this.lon,
   });
 
   factory WeatherModel.fromJson(Map<String, dynamic> json) {
@@ -36,8 +32,6 @@ class WeatherModel {
       windSpeed: json['wind_speed'].toDouble(),
       pressure: json['pressure'],
       icon: json['icon'],
-      lat: json['coordinates']['lat'].toDouble(),
-      lon: json['coordinates']['lon'].toDouble(),
     );
   }
 }
